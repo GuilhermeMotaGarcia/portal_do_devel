@@ -4,6 +4,48 @@ body{
     background-color: white;
 }
 
-header{
-    font-size: 40px;
+header, footer{
+    padding: 10px;
+    font-size: 15px;
+    background-color: black;
+    text-align: center;
+    color: white;
 }
+
+
+nav{
+    background-color: black; 
+    padding: 10px;
+}
+
+nav ul{
+    display: flex;
+    justify-content: end;   
+}
+
+nav ul li a{
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    gap: 10px;
+}
+
+main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+article{
+    width: 40%;
+    background-color: rgb(124, 112, 136);
+}
+
+.container{
+    margin: 0 auto;
+    max-width: 1000px;
+}
+
+
+/*fiz até parte 3, terminar para próxima aula*/
