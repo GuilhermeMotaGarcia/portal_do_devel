@@ -2,6 +2,8 @@ body{
     margin: 0;
     padding: 0;
     background-color: white;
+    transition: transform 0.3s; /* Adicionando uma transição para a transformação */
+    font-family: Arial, sans-serif;
 }
 
 header, footer{
@@ -23,29 +25,110 @@ nav ul{
     justify-content: end;   
 }
 
+nav ul li {
+    list-style-type: none;
+    padding: 10px;
+}
+
+
 nav ul li a{
     text-decoration: none;
     font-weight: bold;
     color: white;
-    gap: 10px;
+
 }
 
 main{
+    margin-top: 15px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    padding: 5px;
+    gap: 10px;
+}
+
+.main-perfil {
+    margin-top: 15px;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    gap: 10px;
 }
 
 article{
     width: 40%;
     background-color: rgb(124, 112, 136);
+    padding: 10px;
 }
 
+article figure {
+    margin: 0;
+}
+
+.bloco {
+    display: flex;
+    margin-left: 10px;
+}
+
+.bloco-perfil {
+    width: 95%;
+}
+
+.bloco-config {
+    padding: 20px;
+}
+
+.bloco-config label, input, button {
+    margin-bottom: 10px; /* Adicione uma margem inferior para separar os elementos */
+    display: inline-block; /* Faça os elementos ocuparem uma linha separada */
+}
 .container{
     margin: 0 auto;
     max-width: 1000px;
+    background-color: bisque;
+}
+
+@media (max-width: 768px) {
+    .bloco {
+        flex-wrap: nowrap; /* Restaurando a definição padrão de empacotamento flex */
+        align-items: center; /* Definindo alinhamento dos itens como central */
+
+        margin-left: 0; /* Removendo a margem esquerda das imagens */
+    }
+
+    article {
+        width: 100%; /* Definindo a largura dos articles como 100% */
+    }
+
+    article figure {
+        margin-left: 10px; /* Adicionando uma margem esquerda às imagens */
+    }
+}
+
+@media (max-width: 900px) {
+    .blocos {
+        flex-wrap: wrap; /* Definindo empacotamento flex */
+        justify-content: center;
+    }
 }
 
 
-/*fiz até parte 3, terminar para próxima aula*/
+
+/*body {: Inicia a definição das regras CSS para o elemento <body>.
+margin: 0;: Define a margem externa do corpo como 0, removendo qualquer margem padrão que possa ser aplicada pelo navegador.
+padding: 0;: Define o preenchimento interno do corpo como 0, removendo qualquer preenchimento padrão que possa ser aplicado pelo navegador.
+background-color: white;: Define a cor de fundo do corpo como branco.
+transition: transform 0.3s;: Adiciona uma transição suave com duração de 0.3 segundos para a propriedade transform. Isso significa que qualquer alteração na transformação de elementos terá uma animação suave de 0.3 segundos.
+font-family: Arial, sans-serif;: Define a família de fontes para o corpo como Arial, seguido por fontes genéricas do tipo sans-serif caso Arial não esteja disponível.
+}: Finaliza as regras CSS para o elemento <body>.
+header, footer {: Inicia a definição das regras CSS para os elementos <header> e <footer>.
+padding: 10px;: Define um preenchimento interno de 10 pixels para os elementos <header> e <footer>, criando um espaço interno ao redor do conteúdo desses elementos.
+font-size: 15px;: Define o tamanho da fonte como 15 pixels para os elementos <header> e <footer>.
+background-color: black;: Define a cor de fundo como preto para os elementos <header> e <footer>.
+text-align: center;: Centraliza o texto dentro dos elementos <header> e <footer>.
+color: white;: Define a cor do texto como branco para os elementos <header> e <footer>, garantindo que o texto seja visível em um fundo preto.
+}: Finaliza as regras CSS para os elementos <header> e <footer>.
+E assim por diante para o restante do código. Cada linha define uma propriedade ou conjunto de propriedades CSS para diferentes elementos HTML. Por exemplo, as linhas relacionadas a nav, main, article, .bloco, .bloco-perfil, .bloco-config, e .container estão definindo estilos para navegação, conteúdo principal, artigos, blocos de layout e contêiner de layout, respectivamente. As linhas dentro dos @media queries definem estilos específicos para diferentes tamanhos de tela. Por exemplo, a primeira regra dentro da @media (max-width: 768px) está ajustando o layout quando a largura da tela é de até 768 pixels, enquanto a regra dentro da @media (max-width: 900px) está ajustando o layout quando a largura da tela é de até 900 pixels.*/
